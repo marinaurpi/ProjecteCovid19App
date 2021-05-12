@@ -1,0 +1,20 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" onclick="document.getElementById('tab1I').src='assets/marcador-de-posicion.png';document.getElementById('tab2I').src='assets/flag (1).png';document.getElementById('tab3I').src='assets/tierra (1).png';document.getElementById('tab1L').style.color='#EE6161';document.getElementById('tab2L').style.color='#707070';document.getElementById('tab3L').style.color='#707070'">
+      <img id="tab1I" src="assets/marcador-de-posicion.png" width="30%">
+      <ion-label style="color: #EE6161;" id="tab1L">Tots els Països</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" onclick="document.getElementById('tab1I').src='assets/placeholder (2).png';document.getElementById('tab2I').src='assets/flag.png';document.getElementById('tab3I').src='assets/tierra (1).png'; document.getElementById('tab1L').style.color='#707070';document.getElementById('tab2L').style.color='#EE6161';document.getElementById('tab3L').style.color='#707070'">
+      <img id="tab2I" src="assets/flag (1).png" width="30%">
+      <ion-label style="color: #707070;" id="tab2L">Per País</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" onclick="document.getElementById('tab1I').src='assets/placeholder (2).png';document.getElementById('tab2I').src='assets/flag (1).png';document.getElementById('tab3I').src='assets/tierra.png'; document.getElementById('tab1L').style.color='#707070';document.getElementById('tab2L').style.color='#707070';document.getElementById('tab3L').style.color='#EE6161'">
+      <img id="tab3I" src="assets/tierra (1).png" width="30%">
+      <ion-label style="color: #707070;" id="tab3L">Mundial</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

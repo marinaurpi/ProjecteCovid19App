@@ -1,0 +1,40 @@
+<ion-header >
+  <ion-toolbar>
+    <img src="assets/informacion.png" width="10%" style="margin: 5% 0% 5% 5%;" slot="start">
+    <ion-title style="font-size:larger;font-family:Verdana, Geneva, Tahoma, sans-serif;text-transform: uppercase;" >{{country.Country}}</ion-title>
+      <img src="assets\Close.png" (click)="dismiss()" style="margin-right: 12px;width: 5%;" alt="" slot="end">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+<ion-card >
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label ><b>País: </b> {{country.Country}}</ion-label>
+  </ion-item>
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label><b>Codi del país: </b> {{country.CountryCode}}</ion-label>
+  </ion-item>
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label><b>Data: </b> {{formatDate(country.Date)}}</ion-label>
+  </ion-item>
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label><b>Confirmats nous: </b> {{country.NewConfirmed}}</ion-label>
+  </ion-item>
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label><b>Morts noves: </b> {{country.NewDeaths}}</ion-label>
+  </ion-item>
+    <ion-item style="margin-right: 4.5%;">
+      <ion-label><b>Recuperats nous: </b> {{country.NewRecovered}}</ion-label>
+    </ion-item>
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label><b>Confirmats totals: </b> {{country.TotalConfirmed}}</ion-label>
+  </ion-item>
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label><b>Morts totals: </b> {{country.TotalDeaths}}</ion-label>
+  </ion-item>
+  <ion-item style="margin-right: 4.5%;">
+    <ion-label><b>Recuperats totals: </b> {{country.TotalRecovered}}</ion-label>
+  </ion-item>
+</ion-card>
+
+</ion-content>

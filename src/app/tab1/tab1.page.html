@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img src="assets/coronavirus.png" width="10%" style="margin: 5% 0% 5% 5%;" slot="start" (click)="goWorldInformation()">
+    <ion-title style="font-size:larger;font-family:Verdana, Geneva, Tahoma, sans-serif;font-weight: bold; ">
+      TOTS ELS PAÏSOS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list style="margin: 1.5%;">
+    <ion-item *ngFor="let c of summaryDataSearch" style="margin-right: 4.5%;"  (click)="goCountryDetail(c)">
+      <ion-label>
+        <img src="assets/location.png" width="11%" style="float: left;margin: 2% 4%;">
+        <h2 style="font-size: larger;font-family:Verdana, Geneva, Tahoma, sans-serif; ">{{c.Country}}</h2>
+        <h3 style="font-size: small;font-family: Verdana, Geneva, Tahoma, sans-serif;" >{{formatDate(c.Date)}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

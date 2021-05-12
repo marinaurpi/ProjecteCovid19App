@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img src="assets/coronavirus.png" width="10%" style="margin: 5% 0% 5% 5%;" slot="start" (click)="goWorldInformation()">
+    <ion-title style="font-size:larger;font-family:Verdana, Geneva, Tahoma, sans-serif;font-weight: bold;">
+      INFORMACIÓ MUNDIAL
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+  <ion-item lines="none" style="color: #EE6161;font-size: 13px;margin: 2% 4% 0% 2%;">* Selecciona la franja de dates que vulguis i troba la informació mundial per a cada dia.</ion-item>
+  <ion-item lines="none" style="margin: 0% 4% 0% 4%;">
+      <ion-label style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Data Inicial</ion-label>
+      <ion-datetime displayFormat="DD MM YY" placeholder="Selecciona una data" [(ngModel)]="dia1" (ionChange)="onSelectChange()"></ion-datetime>
+    </ion-item>
+    <ion-item lines="none" style="margin: -1% 4% 0% 4%;">
+      <ion-label style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Data Final</ion-label>
+      <ion-datetime displayFormat="DD MM YY" placeholder="Selecciona una data" [(ngModel)]="dia2" (ionChange)="onSelectChange()"></ion-datetime>
+    </ion-item>
+  <ion-list style="margin: 1%;">
+    
+    <ion-item *ngFor="let d of dadesTotal" style="margin-right: 4.5%;" (click)="goWorldSummary(d)">
+      <ion-label>
+        <img src="assets/en-todo-el-mundo.png" width="10%" style="float: left;margin: 3% 4%;">
+        <h2 style="font-size: large;font-family: Verdana, Geneva, Tahoma, sans-serif;" >{{formatDate(d.Date)}}</h2>
+        <h3 style="font-size: small;font-family:Verdana, Geneva, Tahoma, sans-serif; ">{{formatTime(d.Date)}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
